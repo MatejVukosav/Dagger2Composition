@@ -1,4 +1,4 @@
-package vuki.com.dagger2composition;
+package vuki.com.dependency_injection.di;
 
 import android.app.Activity;
 import android.app.Application;
@@ -8,13 +8,13 @@ import javax.inject.Inject;
 import dagger.android.AndroidInjector;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.HasActivityInjector;
-import vuki.com.dagger2composition.di.DaggerAppComponent;
 
 /**
+ * Project application class must extend this class in order to use dependency injection.
  * Created by Vuki on 20.6.2017..
  */
 
-public class App extends Application implements HasActivityInjector {
+public abstract class DependencyApp extends Application implements HasActivityInjector {
 
     @Inject
     DispatchingAndroidInjector<Activity> activityDispatchingAndroidInjector;
@@ -23,12 +23,10 @@ public class App extends Application implements HasActivityInjector {
     public void onCreate() {
         super.onCreate();
 
-        DaggerAppComponent
-                .builder()
-                .application( this )
-                .build()
-                .inject( this );
+
     }
+
+    public abstract void inject();
 
     @Override
     public AndroidInjector<Activity> activityInjector() {
