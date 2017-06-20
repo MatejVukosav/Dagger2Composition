@@ -3,7 +3,7 @@ package vuki.com.dagger2composition;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-final class MainActivity extends AppCompatActivity {
+public final class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
