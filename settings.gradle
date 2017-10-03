@@ -1,1 +1,1 @@
-include ':app', ':dependency-injection', ':network'
+include ':app', ':dependency-injection'

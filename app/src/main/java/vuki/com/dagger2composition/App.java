@@ -30,8 +30,10 @@ public class App extends Application implements HasActivityInjector {
                 .inject( this );
     }
 
+
     @Override
     public AndroidInjector<Activity> activityInjector() {
         return activityDispatchingAndroidInjector;
     }
+
 }

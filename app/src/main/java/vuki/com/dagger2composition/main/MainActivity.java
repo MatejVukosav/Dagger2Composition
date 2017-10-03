@@ -1,8 +1,8 @@
 package vuki.com.dagger2composition.main;
 
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Chronometer;
 import android.widget.Toast;
 
@@ -11,11 +11,15 @@ import javax.inject.Inject;
 import dagger.android.AndroidInjection;
 import vuki.com.dagger2composition.R;
 import vuki.com.dagger2composition.databinding.ActivityMainBinding;
+import vuki.com.dependency_injection.LibActivity;
 
 public final class MainActivity extends AppCompatActivity implements MainMvp.View {
 
     @Inject
     MainMvp.Presenter presenter;
+
+    @Inject
+    LibActivity libActivity;
 
     ActivityMainBinding binding;
 
