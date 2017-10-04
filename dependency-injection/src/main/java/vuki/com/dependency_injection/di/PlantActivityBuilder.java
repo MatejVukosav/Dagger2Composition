@@ -7,7 +7,7 @@ import vuki.com.dependency_injection.lib.LibModule;
 
 
 @Module
-public abstract class BaseActivityBuilder {
+public abstract class PlantActivityBuilder {
 
     @ContributesAndroidInjector(modules = LibModule.class)
     abstract LibActivity bindLibActivity();

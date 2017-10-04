@@ -9,6 +9,7 @@ import vuki.com.dagger2composition.App;
 
 @Component(modules = {
         AndroidInjectionModule.class,
+        AppModule.class,
         ActivityBuilder.class
 })
 public interface AppComponent {
