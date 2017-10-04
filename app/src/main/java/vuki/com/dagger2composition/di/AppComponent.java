@@ -6,18 +6,19 @@ import dagger.BindsInstance;
 import dagger.Component;
 import dagger.android.AndroidInjectionModule;
 import vuki.com.dagger2composition.App;
-import vuki.com.dependency_injection.di.component.BaseAppComponent;
 
 /**
- * Abstract class that should be extended in real project
  * Created by Vuki on 20.6.2017..
  */
+//@Singleton
 @Component(modules = {
         AndroidInjectionModule.class,
-        AppModules.class,
-        ActivityBuilder.class
+        ActivityBuilder.class,
+        AppModule.class
 })
-public interface AppComponent extends BaseAppComponent {
+public interface AppComponent {
+
+    UtilsComponent getUtils();
 
     @Component.Builder
     interface Builder {

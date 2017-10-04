@@ -10,16 +10,19 @@ import javax.inject.Inject;
 
 import dagger.android.AndroidInjection;
 import vuki.com.dagger2composition.R;
+import vuki.com.dagger2composition.SharedPrefsInterface;
 import vuki.com.dagger2composition.databinding.ActivityMainBinding;
-import vuki.com.dependency_injection.LibActivity;
 
 public final class MainActivity extends AppCompatActivity implements MainMvp.View {
 
     @Inject
     MainMvp.Presenter presenter;
 
+//    @Inject
+//    LibContract.View view;
+
     @Inject
-    LibActivity libActivity;
+    SharedPrefsInterface prefs;
 
     ActivityMainBinding binding;
 

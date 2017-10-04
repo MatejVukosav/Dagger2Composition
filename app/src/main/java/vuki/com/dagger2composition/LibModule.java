@@ -1,8 +1,7 @@
-package vuki.com.dependency_injection.di;
+package vuki.com.dagger2composition;
 
 import dagger.Module;
 import dagger.Provides;
-import vuki.com.dependency_injection.LibActivity;
 
 /**
  * Created by mvukosav
@@ -10,8 +9,11 @@ import vuki.com.dependency_injection.LibActivity;
 @Module
 public class LibModule {
 
+    //    @PerActivity
     @Provides
-    LibActivity providesLibActivity( LibActivity libActivity ) {
+    LibContract.View providesLibActivity( LibActivity libActivity ) {
         return libActivity;
     }
+
+
 }

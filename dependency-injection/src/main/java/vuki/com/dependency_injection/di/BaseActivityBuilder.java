@@ -1,8 +1,6 @@
 package vuki.com.dependency_injection.di;
 
 import dagger.Module;
-import dagger.android.ContributesAndroidInjector;
-import vuki.com.dependency_injection.LibActivity;
 
 /**
  * Abstract class used in dependency injection library
@@ -11,6 +9,6 @@ import vuki.com.dependency_injection.LibActivity;
 @Module
 public abstract class BaseActivityBuilder {
 
-    @ContributesAndroidInjector(modules = LibModule.class)
-    abstract LibActivity bindLibActivity();
+//    @ContributesAndroidInjector(modules = LibModule.class)
+//    abstract LibActivity bindLibActivity();
 }

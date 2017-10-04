@@ -1,11 +1,12 @@
-package vuki.com.dependency_injection;
+package vuki.com.dagger2composition;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import dagger.android.AndroidInjection;
 
-public class LibActivity extends AppCompatActivity {
+public class LibActivity extends AppCompatActivity implements LibContract.View {
+
 
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
