@@ -1,12 +1,6 @@
 package vuki.com.dagger2composition.main;
 
-import android.util.Log;
-
 import javax.inject.Inject;
-
-/**
- * Created by Vuki on 20.6.2017..
- */
 
 public class MainPresenterImpl implements MainMvp.Presenter {
 

@@ -7,6 +7,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true">
 
+
+        <activity android:name="vuki.com.dependency_injection.lib.LibActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -18,8 +18,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".LibActivity">
-        </activity>
+
     </application>
 
 </manifest>

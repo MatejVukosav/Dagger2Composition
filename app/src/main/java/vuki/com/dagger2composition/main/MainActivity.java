@@ -10,20 +10,18 @@ import javax.inject.Inject;
 
 import dagger.android.AndroidInjection;
 import vuki.com.dagger2composition.R;
-import vuki.com.dagger2composition.SharedPrefsInterface;
 import vuki.com.dagger2composition.databinding.ActivityMainBinding;
 
 public final class MainActivity extends AppCompatActivity implements MainMvp.View {
 
-    @Inject
-    MainMvp.Presenter presenter;
-
+    //try to inject these two
 //    @Inject
 //    LibContract.View view;
+//    @Inject
+//    SharedPrefsInterface prefs;
 
     @Inject
-    SharedPrefsInterface prefs;
-
+    MainMvp.Presenter presenter;
     ActivityMainBinding binding;
 
     @Override
@@ -38,7 +36,6 @@ public final class MainActivity extends AppCompatActivity implements MainMvp.Vie
                 presenter.setTime( chronometer.getBase() );
             }
         } );
-
         binding.chronometer.start();
         presenter.loadMain();
     }

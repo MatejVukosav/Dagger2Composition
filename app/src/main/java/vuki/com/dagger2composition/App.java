@@ -8,12 +8,7 @@ import javax.inject.Inject;
 import dagger.android.AndroidInjector;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.HasActivityInjector;
-import vuki.com.dagger2composition.di.AppComponent;
 import vuki.com.dagger2composition.di.DaggerAppComponent;
-
-/**
- * Created by Vuki on 20.6.2017..
- */
 
 public class App extends Application implements HasActivityInjector {
 
@@ -24,17 +19,10 @@ public class App extends Application implements HasActivityInjector {
     public void onCreate() {
         super.onCreate();
 
-        AppComponent appComponent = DaggerAppComponent
+        DaggerAppComponent
                 .builder()
                 .application( this )
-                .build();
-
-//        DaggerUtilsComponent.builder()
-//                .appComponent( appComponent )
-//                .build();
-
-
-        appComponent
+                .build()
                 .inject( this );
     }
 

@@ -1,15 +1,11 @@
-package vuki.com.dagger2composition;
+package vuki.com.dependency_injection.lib;
 
 import dagger.Module;
 import dagger.Provides;
 
-/**
- * Created by mvukosav
- */
 @Module
 public class LibModule {
 
-    //    @PerActivity
     @Provides
     LibContract.View providesLibActivity( LibActivity libActivity ) {
         return libActivity;

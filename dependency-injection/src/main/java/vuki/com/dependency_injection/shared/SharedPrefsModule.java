@@ -1,11 +1,9 @@
-package vuki.com.dagger2composition;
+package vuki.com.dependency_injection.shared;
 
 import dagger.Module;
 import dagger.Provides;
 
-/**
- * Created by mvukosav
- */
+
 @Module
 public class SharedPrefsModule {
 

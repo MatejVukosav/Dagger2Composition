@@ -1,14 +1,14 @@
 package vuki.com.dependency_injection.di;
 
-/**
- * Abstract class that should be extended in real project
- * Created by Vuki on 20.6.2017..
- */
-//@Component(modules = {
-//        AndroidInjectionModule.class,
-//        BaseActivityBuilder.class,
-//        LibModule.class
-//})
+import dagger.Component;
+import dagger.android.AndroidInjectionModule;
+import vuki.com.dependency_injection.shared.SharedPrefsModule;
+
+@Component(modules = {
+        AndroidInjectionModule.class,
+        BaseActivityBuilder.class,
+        SharedPrefsModule.class
+})
 public interface BaseAppComponent {
 
 //    @Component.Builder
