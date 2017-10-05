@@ -11,13 +11,14 @@ import javax.inject.Inject;
 import dagger.android.AndroidInjection;
 import vuki.com.dagger2composition.R;
 import vuki.com.dagger2composition.databinding.ActivityMainBinding;
+import vuki.com.dependency_injection.duck.DuckContract;
 import vuki.com.dependency_injection.shared.SharedPrefsInterface;
 
 public final class MainActivity extends AppCompatActivity implements MainMvp.View {
 
     //try to inject these two
-//    @Inject
-//    LibContract.View view;
+    @Inject
+    DuckContract.View view;
     @Inject
     SharedPrefsInterface prefs;
 
@@ -39,6 +40,10 @@ public final class MainActivity extends AppCompatActivity implements MainMvp.Vie
         } );
         binding.chronometer.start();
         presenter.loadMain();
+
+        //example usage
+        prefs.save();
+        view.hashCode();
     }
 
     @Override

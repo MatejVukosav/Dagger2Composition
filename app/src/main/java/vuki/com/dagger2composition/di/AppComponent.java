@@ -6,11 +6,15 @@ import dagger.BindsInstance;
 import dagger.Component;
 import dagger.android.AndroidInjectionModule;
 import vuki.com.dagger2composition.App;
+import vuki.com.dependency_injection.duck.DuckModule;
+import vuki.com.dependency_injection.shared.SharedPrefsModule;
 
 @Component(modules = {
         AndroidInjectionModule.class,
         AppModule.class,
-        ActivityBuilder.class
+        ActivityBuilder.class,
+        SharedPrefsModule.class,
+        DuckModule.class
 })
 public interface AppComponent {
 
